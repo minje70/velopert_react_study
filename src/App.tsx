@@ -3,6 +3,7 @@ import "./App.css";
 import Second from "./Second";
 import Color from "./Color";
 import Hello from "./Hello";
+import Counter from "./Counter";
 
 export default function App() {
   const numbers: number[] = [1, 2, 3, 4, 5];
@@ -24,6 +25,7 @@ export default function App() {
       <Color color={"orange"} name={"오렌지!!"} />
       <Hello name="mijeong" isSpecial={true} />
       <Hello name="minjae" isSpecial={false} />
+      <Counter />
     </>
   );
 }
