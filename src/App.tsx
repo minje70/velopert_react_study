@@ -5,6 +5,7 @@ import Color from './Color';
 import Hello from './Hello';
 import Counter from './Counter';
 import InputSample from './InputSample';
+import UserList from './UserLIst';
 
 export default function App() {
 	const numbers: number[] = [1, 2, 3, 4, 5];
@@ -28,6 +29,7 @@ export default function App() {
 			<Hello name="minjae" isSpecial={false} />
 			<Counter />
 			<InputSample />
+			<UserList />
 		</>
 	);
 }
