@@ -35,9 +35,9 @@ export default function Animation() {
   return (
     <>
       소스 캔버스
-      <canvas ref={srcCanvas} width="500" height="500"></canvas>
+      <canvas ref={srcCanvas} width="100" height="100"></canvas>
       dest 캔버스
-      <canvas ref={destCanvas} width="500" height="500"></canvas>
+      <canvas ref={destCanvas} width="100" height="100"></canvas>
     </>
   );
 }

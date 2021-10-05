@@ -5,7 +5,7 @@ import Color from "./Color";
 import Hello from "./Hello";
 import Counter from "./Counter";
 import InputSample from "./InputSample";
-import UserList, { IUser } from "./UserLIst";
+import UserList, { IUser } from "./UserList";
 import Animation from "./Animation";
 
 export default function App() {
