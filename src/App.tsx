@@ -4,6 +4,7 @@ import Second from "./Second";
 import Color from "./Color";
 import Hello from "./Hello";
 import Counter from "./Counter";
+import Animation from "./Animation";
 
 export default function App() {
   const numbers: number[] = [1, 2, 3, 4, 5];
@@ -26,6 +27,7 @@ export default function App() {
       <Hello name="mijeong" isSpecial={true} />
       <Hello name="minjae" isSpecial={false} />
       <Counter />
+      <Animation />
     </>
   );
 }
