@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./App.css";
 import Second from "./Second";
 import Color from "./Color";
 import Hello from "./Hello";
 import Counter from "./Counter";
+import InputSample from "./InputSample";
+import UserList, { IUser } from "./UserLIst";
 import Animation from "./Animation";
 
 export default function App() {
+  const users: IUser[] = [
+    {
+      id: 1,
+      username: "velopert",
+      email: "public.velopert@gmail.com",
+    },
+    {
+      id: 2,
+      username: "tester",
+      email: "tester@example.com",
+    },
+    {
+      id: 3,
+      username: "liz",
+      email: "liz@example.com",
+    },
+  ];
+
+  const nextId = useRef(4);
   const numbers: number[] = [1, 2, 3, 4, 5];
   return (
     <>
@@ -27,6 +48,8 @@ export default function App() {
       <Hello name="mijeong" isSpecial={true} />
       <Hello name="minjae" isSpecial={false} />
       <Counter />
+      <InputSample />
+      <UserList users={users} />
       <Animation />
     </>
   );
