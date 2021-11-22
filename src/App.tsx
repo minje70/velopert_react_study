@@ -7,6 +7,7 @@ import Counter from "./Counter";
 import InputSample from "./InputSample";
 import UserList, { IUser } from "./UserList";
 import Animation from "./Animation";
+import UseEffecTest from "./UseEffectTest";
 
 export default function App() {
   const users: IUser[] = [
@@ -51,6 +52,7 @@ export default function App() {
       <InputSample />
       <UserList users={users} />
       <Animation />
+      <UseEffecTest />
     </>
   );
 }

@@ -20,11 +20,22 @@ export default function Animation() {
       ctx.fillRect(30, 30, 50, 50);
     }
   }, []);
+  let number = 0;
   const callback = () => {
     const ctx = destCanvas.current?.getContext("2d");
     if (ctx) {
       if (srcCanvas.current) {
-        ctx.drawImage(srcCanvas.current, 15, 15, 50, 50, 0, 0, 50, 50);
+        ctx.drawImage(
+          srcCanvas.current,
+          15,
+          15,
+          50,
+          50,
+          number++ % 60,
+          0,
+          50,
+          50
+        );
       }
     }
     requestAnimationFrame(callback);
