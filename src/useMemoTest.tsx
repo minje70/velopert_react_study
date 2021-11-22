@@ -8,6 +8,7 @@ export default function UseMemoTest() {
   const [testNumber, setTestNumber] = useState(0);
   const [testNumber2, setTestNumber2] = useState(0);
   const memo = useMemo(() => memoTest(), [testNumber]);
+  console.log(`memo : ${memo}`);
   const onClick = () => {
     setTestNumber(testNumber + 1);
   };
