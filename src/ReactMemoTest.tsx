@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-function Test() {
+const Test = React.memo(function Test() {
   return <div>리렌더링 안되야합니다.</div>;
-}
+});
 
 export default function ReactMemoTest() {
   const [state, setState] = useState(0);
@@ -10,11 +10,11 @@ export default function ReactMemoTest() {
     setState(state + 1);
     console.log(state);
   };
-  const MemoTest = React.memo(Test);
+
   return (
     <div>
-      <MemoTest />
-      <MemoTest />
+      <Test />
+      <Test />
       <Test />
       <button onClick={onClick}>reactMemoTest</button>
     </div>
