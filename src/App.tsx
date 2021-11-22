@@ -9,6 +9,7 @@ import UserList, { IUser } from "./UserList";
 import Animation from "./Animation";
 import UseEffecTest from "./UseEffectTest";
 import UseMemoTest from "./useMemoTest";
+import ReactMemoTest from "./ReactMemoTest";
 
 export default function App() {
   const users: IUser[] = [
@@ -55,6 +56,7 @@ export default function App() {
       <Animation />
       <UseEffecTest />
       <UseMemoTest />
+      <ReactMemoTest />
     </>
   );
 }
