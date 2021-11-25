@@ -7,10 +7,10 @@ export interface IUser {
 }
 
 interface UserProp {
-	user: User;
+	user: IUser;
 }
 interface UserListProp {
-	users: User[];
+	users: IUser[];
 }
 
 function User(props: UserProp) {
