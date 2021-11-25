@@ -1,27 +1,18 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import Second from './Second';
 import Color from './Color';
 import Hello from './Hello';
 import Counter from './Counter';
 import InputSample from './InputSample';
-import UserList, { IUser } from './UserLIst';
-import CreateUser from './CreateUser';
+import UserList, { IUser } from './UserList';
+import Animation from './Animation';
+import UseEffecTest from './UseEffectTest';
+import UseMemoTest from './useMemoTest';
+import ReactMemoTest from './ReactMemoTest';
 
 export default function App() {
-	const [inputs, setInputs] = useState({
-		username: '',
-		email: '',
-	});
-	const { username, email } = inputs;
-	const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const { name, value } = event.target;
-		setInputs({
-			...inputs,
-			[name]: value,
-		});
-	};
-	const [users, setUsers] = useState<IUser[]>([
+	const users: IUser[] = [
 		{
 			id: 1,
 			username: 'velopert',
@@ -37,22 +28,9 @@ export default function App() {
 			username: 'liz',
 			email: 'liz@example.com',
 		},
-	]);
+	];
 
 	const nextId = useRef(4);
-	const onCreate = () => {
-		const user: IUser = {
-			id: nextId.current,
-			username,
-			email,
-		};
-		setInputs({
-			username: '',
-			email: '',
-		});
-		setUsers([...users, user]);
-		nextId.current += 1;
-	};
 	const numbers: number[] = [1, 2, 3, 4, 5];
 	return (
 		<>
@@ -74,13 +52,11 @@ export default function App() {
 			<Hello name="minjae" isSpecial={false} />
 			<Counter />
 			<InputSample />
-			<CreateUser
-				username={username}
-				email={email}
-				onChange={onChange}
-				onCreate={onCreate}
-			/>
 			<UserList users={users} />
+			<Animation />
+			<UseEffecTest />
+			<UseMemoTest />
+			<ReactMemoTest />
 		</>
 	);
 }
